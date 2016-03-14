@@ -1,3 +1,45 @@
 This tiny project is my proof of concept about how to interact with a Cassandra server using scala code, nothing more.
 
 There is a common subproject with all cassandra scala code, some tests and finally there is a main project which uses common subproject to run queries against cassandra.
+
+In order to run it, download it and run the next commands:
+
+MacBook-Pro-Retina-de-Alonso:~ aironman$ cd Downloads/
+MacBook-Pro-Retina-de-Alonso:Downloads aironman$ cd cassandra-scala-app-master/
+MacBook-Pro-Retina-de-Alonso:cassandra-scala-app-master aironman$ sbt
+[info] Set current project to My Project (in build file:/Users/aironman/Downloads/cassandra-scala-app-master/)
+> compile
+[info] Updating {file:/Users/aironman/Downloads/cassandra-scala-app-master/}cassandra-scala-app-master...
+[info] Updating {file:/Users/aironman/Downloads/cassandra-scala-app-master/}common...
+[info] Resolving jline#jline;2.12 ...
+[info] Done updating.
+[info] Resolving org.fusesource.jansi#jansi;1.4 ...
+[info] Updating {file:/Users/aironman/Downloads/cassandra-scala-app-master/}main...
+[info] Done updating.
+[info] Resolving org.clapper#argot_2.11;1.0.3 ...
+[info] Compiling 3 Scala sources and 1 Java source to /Users/aironman/Downloads/cassandra-scala-app-master/common/target/scala-2.11/classes...
+[info] Resolving jline#jline;2.12 ...
+[info] Done updating.
+[info] Compiling 1 Scala source to /Users/aironman/Downloads/cassandra-scala-app-master/main/target/scala-2.11/classes...
+[success] Total time: 6 s, completed 14-mar-2016 11:10:26
+> project main
+[info] Set current project to main (in build file:/Users/aironman/Downloads/cassandra-scala-app-master/)
+> run
+[info] Running common.utils.cassandra.CassandraMain 
+Trying to connect to Cassandra server...
+host is: localhost
+port is: 9042
+keyspace is: test
+localhost
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Connected to Cassandra server...
+row is foo
+Finishing connection to Cassandra
+Finished!
+
+
+HINT
+
+An existing cassandra server must be running before you run this tiny proof of concept.
