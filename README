@@ -1,0 +1,3 @@
+This tiny project is my proof of concept about how to interact with a Cassandra server using scala code, nothing more.
+
+There is a common subproject with all cassandra scala code, some tests and finally there is a main project which uses common subproject to run queries against cassandra.
